@@ -1,0 +1,54 @@
+/* setting the theme for the page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
+
+:root{
+  --pcolor:#292B43;
+  --bcolor:#343953;
+  --mcolor:#DDE1EE
+}
+.dark{
+  --mcolor:#292B43;
+  --bcolor:#FFFFFF;
+  --pcolor:#DDE1EE
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: var(--pcolor);
+  color: var(--mcolor);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.btn{
+  cursor: pointer;
+  background: var(--mcolor);
+  color: var(--pcolor);
+  padding: .25rem 1.25rem;
+  border-radius: 1.25rem;
+  font-weight: 600;
+}
+.container{
+  background: var(--bcolor);
+  border-radius: 0.5rem;
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.5rem;
+}
+span{
+  font-size: 1.5rem;
+}
+.launch-container{
+  height: 100%;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Force 1</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <a href="#header" class="logo">
+                <img id="header-img" src="./img/nike_logo.png">
+            </a>
+            <div class="parts-link">
+                <a href="#designs" class="nav-link">Designs</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="designs">
+        Designs
+    </section>
+
+    <section id="reviews">
+        Reviews
+    </section>
+
+    <section id="contact">
+        <div class="contact-title">Contact Us!</div>
+        <form class="form">
+            <div class="name-container">
+                <label for="name" id="name">Name</label>
+                <input type="text" id="name-label" placeholder="Name" name="name">
+            </div>
+
+            <div class="email-container">
+                <label for="email" id="email">Email</label>
+                <input type="email" id="email-label" placeholder="Email" name="email">
+            </div>
+
+            <div class="feedback-container">
+                <label for="textarea">Message</label>
+                <textarea name="textarea" id="textarea" name="message"></textarea>
+            </div>
+
+            <div class="submit-container">
+                <input type="submit" value="Submit" class="submit">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+}
+
+section{
+    height: 90vh;
+    padding-top: 10vh;
+}
+
+#header{
+    height: 100vh;
+}
+
+#nav-bar{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 2.5%;
+}
+
+#header-img{
+    width: 100%;
+}
+
+.logo{
+    height: auto;
+    width: 5%;
+}
+
+.parts-link{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.nav-link{
+    height: 100%;
+    text-decoration: none;
+}
+
+#contact{
+    padding-top: 0;
+    margin-top: 10vh;
+}
+
+
+#2A2A -> white
