@@ -18,10 +18,17 @@ const Launches = () => {
         <div>
             <div className="launch-container">
                 {data.map((item, index) => (
-                    <div className="container" key={index}>
-                        {item.flight_number} : {item.name} ({item.date_local.slice(0,4)})
-                        <div>
-                            Details: {item.details}
+                    <div className="container launch-info" key={index}>
+                        <div className="launch-image">
+                            <img src={item.links.patch.small} alt={item.links.patch.small}></img>
+                        </div>
+                        <div className="launch-description">
+                            <div>
+                                {item.flight_number} : {item.name} ({item.date_local.slice(0,4)})
+                            </div>
+                            <div>
+                                Details: {item.details}
+                            </div>
                         </div>
                     </div>
                 ))}  

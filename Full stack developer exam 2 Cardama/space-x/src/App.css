@@ -38,6 +38,7 @@ body{
   background: var(--bcolor);
   border-radius: 0.5rem;
   box-shadow: 0 .25rem .5rem rgba(0,0,0,0.2);
+  margin: 1rem;
   padding: 1rem;
 }
 h1{
@@ -51,4 +52,17 @@ span{
 }
 .launch-container{
   height: 100%;
+}
+.launch-info{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.launch-image{
+  height: 100%;
+  width: 30%;
+}
+.launch-description{
+  height: 100%;
+  width: 100%;
 }
