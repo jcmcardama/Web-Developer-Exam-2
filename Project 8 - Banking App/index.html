@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./all.js"></script>
+</head>
+<body>
+    <section class="loginPage">
+        <h1><i class="fa-solid fa-building-columns fa-1x"></i> GoVirtual</h1>
+        <div class="login-container container">
+            <div class="loginCredentials">
+                <div class="email-container">
+                    <div>
+                        <i class="fa-solid fa-user fa-2x"></i>
+                    </div>
+                    <div>
+                        <input type="email" class="inputEmail" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="password-container">
+                    <div>
+                        <i class="fa-solid fa-lock fa-2x"></i>
+                    </div>
+                    <div>
+                        <input type="password" class="inputPassword" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button class="loginButton">LOGIN</button>
+                </div>
+            </div>
+            <div class="signUp-container">
+                Don't have account? <button id="signUpButton" class="anchorTag">Sign Up</button>
+            </div>
+        </div>
+    </section>
+    <section class="homePage remove">
+        <h1><i class="fa-solid fa-building-columns fa-1x"></i> GoVirtual</h1>
+        <div class="userList-container container">
+            <h2 class="addNewAccount"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Add New Account</h2>
+            <ul id="userList">
+            </ul>
+        </div>
+    </section>
+    <section class="manageAccount remove">
+        <div class="logoManageAccount-container">
+            <h1><i class="fa-solid fa-building-columns fa-1x"></i> GoVirtual</h1>
+        </div>
+        <div class="accountUser-container">
+            <div class="accountUserInformation container">
+                <div class="welcomeUserName-container">
+                    <h2 class="welcomeUserName">Welcome</h2>
+                </div>
+                <div class="balanceUser-container">
+                    <h2 class="balanceUser">Php</h2>
+                </div>
+                <div class="transactionButtons-container">
+                    <button id="depositButton" class="submitButton transactionBTN"><i class="fa-solid fa-money-bill-transfer"></i> DEPOSIT</button>
+                    <button id="withdrawButton" class="submitButton transactionBTN"><i class="fa-solid fa-money-bill-transfer"></i> WITHDRAW</button>
+                    <button id="transferButton" class="submitButton transactionBTN"><i class="fa-solid fa-money-bill-transfer"></i> TRANSFER</button>
+                </div>
+            </div>
+            <div class="accountUserDashboard container">
+                <div class="transactionHistoryHeader-container">
+                    <h2>Account Dashboard</h2>
+                </div>
+                <div class="accountDashboard-container">
+                    <div class="transactionHistory"></div>
+                    <ul class="expenseHistory"></ul>
+                </div>
+                <div class="expenseButton-container">
+                    <button id="expenseButton" class="submitButton"><i class="fa-solid fa-piggy-bank"></i> EXPENSE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button id="logOutButton" class="submitButton remove"><i class="fa-solid fa-arrow-right-from-bracket fa-1x"></i> LOG OUT</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div id="createAccountForm" class="modalForm">
+                <div class="createAccountFormTitle">
+                    <h2 class="createAccountHeader">Create Account</h2>
+                    <div class="close">&times;</div>
+                </div>
+                <div>
+                    <input type="text" class="newName" placeholder="Name" required>
+                </div>
+                <div>
+                    <input type="email" class="newEmail" placeholder="Email">
+                </div>
+                <div>
+                    <input type="text" class="newPassword" placeholder="Password">
+                </div>
+                <div class="newBalance-container">
+                    <input type="number" class="newBalance" placeholder="Balance">
+                </div>
+                <div>
+                    <button id="submitNewAccountButton" class="submitButton">SUBMIT</button>
+                </div>
+            </div>
+            <div id="depositMoneyForm" class="modalForm remove">
+                <div class="createAccountFormTitle">
+                    <h2 class="createAccountHeader">Deposit Money</h2>
+                    <div class="close">&times;</div>
+                </div>
+                <div>
+                    <input type="number" class="amountDeposit" placeholder="Amount">
+                </div>
+                <div>
+                    <input type="password" class="accountPasswordDeposit" placeholder="Password">
+                </div>
+                <div>
+                    <button id="submitDepositMoneyButton" class="submitButton">SUBMIT</button>
+                </div>
+            </div>
+            <div id="withdrawMoneyForm" class="modalForm remove">
+                <div class="createAccountFormTitle">
+                    <h2 class="createAccountHeader">Withdraw Money</h2>
+                    <div class="close">&times;</div>
+                </div>
+                <div>
+                    <input type="number" class="amountWithdraw" placeholder="Amount">
+                </div>
+                <div>
+                    <input type="password" class="accountPasswordWithdraw" placeholder="Password">
+                </div>
+                <div>
+                    <button id="submitWithdrawMoneyButton" class="submitButton">SUBMIT</button>
+                </div>
+            </div>
+            <div id="transferMoneyForm" class="modalForm remove">
+                <div class="createAccountFormTitle">
+                    <h2 class="createAccountHeader">Transfer Money</h2>
+                    <div class="close">&times;</div>
+                </div>
+                <div>
+                    <input type="text" class="nameTransfer" placeholder="Account Name or Email">
+                </div>
+                <div>
+                    <input type="number" class="amountTransfer" placeholder="Amount">
+                </div>
+                <div>
+                    <input type="password" class="accountPasswordTransfer" placeholder="Password">
+                </div>
+                <div>
+                    <button id="submitTransferMoneyButton" class="submitButton">SUBMIT</button>
+                </div>
+            </div>
+            <div id="expenseMoneyForm" class="modalForm remove">
+                <div class="createAccountFormTitle">
+                    <h2 class="createAccountHeader">Budget App</h2>
+                    <div class="close">&times;</div>
+                </div>
+                <div>
+                    <input type="text" class="expenseItem" placeholder="Item">
+                </div>
+                <div>
+                    <input type="number" class="amountItem" placeholder="Amount">
+                </div>
+                <div>
+                    <button id="submitExpenseMoneyButton" class="submitButton">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

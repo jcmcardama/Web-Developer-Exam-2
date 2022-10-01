@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+   
+    <title>Air Force 1</title>
+</head>
+<body> 
+    <header id="header">
+        <div class="logo-wrapper">
+            <a href="https://www.nike.com/ph" target="_blank"><img   class="logo" src="./img/nike_logo.png" alt="logo" class="header-img"></a>
+        </div>
+        <nav id="nav-bar">
+            <a href="#landing-page" class="nav-link">Home</a>
+            <a href="#video" class="nav-link">Reviews</a>
+            <a href="#shoes" class="nav-link">Shoes</a>
+            <a href="#contact-us" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="landing-page" id="landing-page">
+            <div class="text-wrapper">
+                <h1 class="run-faster">Classic Look</h1>
+                <P class="Landing-paragraph">Modernized for ultimate street style</P>
+                <div class="buttons">
+                    <a href="https://www.nike.com/ph/w/air-force-1-shoes-5sj3yzy7ok" target="_blank"><button class="btn-shop-now" type="submit">Shop Now</button></a>
+                    <a href="https://www.nike.com/ph/air-force-1" target="_blank"><button class="btn-learn-more" type="submit">Learn More</button></a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="./img/Nike-Air-Force-1-Low-Oracle-Aqua-CK4383-300-Release-Date-4.jpg" alt="shoes picture">
+            </div>   
+        </section>
+        <section class="video" id="video">
+                <div class="text-wrapper2">
+                    <h1>Reviews</h1>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="810" height="450" src="https://www.youtube.com/embed/H5Ki4rqiqUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        </section>
+        <section class="shoes" id="shoes">
+            <div class="text-wrapper">
+                <h1 class="Air-booster">AIR FORCE 1</h1>
+                <P class="shoes-paragraph">Make the Air Force 1 yours with</P>
+                <P class="shoes-paragraph">custom colors, premium materials and more.</P>
+                <P class="shoes-paragraph">Price: ₱6,595</P>
+                <div class="buttons-1">
+                    <a href="https://www.nike.com/ph/w/air-force-1-shoes-5sj3yzy7ok" target="_blank"><button class="btn-shop-now" type="submit">Shop Now</button></a>
+                </div>
+            </div> 
+            <div class="image-wrapper">
+                <div class="contrast">
+                    <div class="mySlides">
+                        <img  src="./img/af1_white.PNG" alt="Shoe picture">
+                    </div>
+                    <div class="mySlides">
+                        <img  src="./img/af1_grey.PNG" alt="Shoe picture">
+                    </div>
+                    <div class="mySlides">
+                        <img  src="./img/af1_yellow.PNG" alt="Shoe picture">
+                    </div>
+                    <div class="mySlides">
+                        <img  src="./img/af1_red.PNG" alt="Shoe picture">
+                    </div>
+                    <div class="colors">
+                        <div class="demo cursor" onmouseover="currentSlide(1)">
+                            <div class="shoes-icon">
+                                <img src="./img/af1_white.PNG" alt="white AF1" style="width:100%;height:auto">
+                            </div>
+                        </div>
+                        <div class="demo cursor" onmouseover="currentSlide(2)">
+                            <div class="shoes-icon">
+                                <img src="./img/af1_grey.PNG" alt="grey AF1" style="width:100%;height:auto">
+                            </div>
+                        </div>
+                        <div class="demo cursor" onmouseover="currentSlide(3)">
+                            <div class="shoes-icon">
+                                <img src="./img/af1_yellow.PNG" alt="yellow AF1" style="width:100%;height:auto">
+                            </div>
+                        </div>
+                        <div class="demo cursor" onmouseover="currentSlide(4)">
+                            <div class="shoes-icon">
+                                <img src="./img/af1_red.PNG" alt="red AF1" style="width:100%;height:auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us" id="contact-us">
+            <div class="text-wrapper">
+                <h2 class="contact-text">Contact Us</h2>
+            </div> 
+            <form class="form-wrap" id="form">
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Name" name="name" >
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="Message">Message</label>
+                    <textarea rows="6" cols="8" name="message" required></textarea>
+                </div>
+                <div class="form-row"> <button id="submit" class="btn-shop-now" type="submit">Submit</button></div>
+            </form>
+        </section>
+    </main>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > slides.length){slideIndex = 1}
+        if (n < 1){slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>

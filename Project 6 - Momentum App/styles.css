@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
+
+:root{
+    --pcolor:#292B43;
+    --bcolor:#343953;
+    --mcolor:#DDE1EE
+}
+.dark{
+    --mcolor:#292B43;
+    --bcolor:#FFFFFF;
+    --pcolor:#DDE1EE
+}
+body{
+    font-family: 'Poppins', sans-serif;  
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 92.5vh;
+    background: var(--pcolor);
+    color: var(--mcolor);
+    margin: 0;
+}
+
+.btn{
+    cursor: pointer;
+    background: var(--mcolor);
+    color: var(--pcolor);
+    padding: 4px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    order: 2;
+}
+
+.welcome-name{
+    grid-area: welcome;
+}
+
+.name-container{
+    display: flex;
+}
+
+.focus-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.welcome-focus{
+    grid-area: focus;
+}
+
+.clock-container{
+    grid-area: time;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#clockToday{
+    font-size: 50px;
+    font-weight: 900;
+    display: flex;
+}
+
+.separator {
+    animation: blinker 2s linear infinite;
+}
+  
+@keyframes blinker {  
+    50% { opacity: 0; }
+}
+
+.quote-container{
+    grid-area: quote;
+    display: flex;
+    flex-direction: column;
+}
+
+#quoteListInput{
+    width: 80%;
+}
+
+#addQuote-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#addQuoteList{
+    cursor: pointer;
+    background: var(--mcolor);
+    color: var(--pcolor);
+    padding: 4px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.toDoList-container{
+    grid-area: toDo;
+    height: 500px;
+    overflow: auto;
+}
+
+#homepage{
+    display: grid;
+    grid-template-columns: 400px 800px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "toDo time"
+        "toDo welcome"
+        "toDo focus"
+        "toDo quote";
+    row-gap: 50px;
+    column-gap: 50px;
+    height: auto;
+}
+
+.container{
+    background: var(--bcolor);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+p{
+    letter-spacing: 0.2px;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--mcolor);
+    text-align: justify;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+h1{
+    color: var(--mcolor);
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: normal;
+    font-size: 25px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	background: white;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+	cursor: pointer;
+}
+
+li:nth-child(2n) {
+	background: #f7f7f7;
+}
+
+li:hover span{
+	width: 40px;
+	opacity: 1.0;
+}
+
+span{
+    font-size: 12px;
+    font-weight: 200;
+    color: var(--mcolor);
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	width: 0px;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+	cursor: pointer;
+}
+
+input{
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 6.5px 6.5px 6.5px 17.5px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0);
+    font-size: 16px;
+}
+
+input:focus {
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}
+
+.fa-plus{
+	float: right;
+    padding-top: 5px;
+}
+
+.fa-plus:hover{
+    cursor: pointer;
+}
+
+.check{
+	float: right;
+	margin-right: 30px;
+	margin-top: 10px;
+	color: var(--mcolor);
+}
+
+.check:hover{
+	cursor: pointer;
+	opacity: 0.6;
+
+}
+
+.hide{
+	display: none;
+	color: white;
+}
+
+.green {
+	color: green;
+	opacity: 0.6;
+}
+
+.tasksCompleted {
+	color: rgb(20, 200, 20);
+	opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        height: 90vh;
+        margin: 20px;
+    }
+    #homepage{
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "time"
+            "welcome"
+            "focus"
+            "quote"
+            "toDo";
+        row-gap: 25px;
+    }
+    h1{
+        font-size: 12.5px;
+    }
+    #clockToday{
+        font-size: 25px;
+    }
+    p{
+        font-size: 10px;
+    }
+    input{
+        font-size: 8px;
+    }
+    span{
+        font-size: 6px;
+        height: 20px;
+    }
+    li{
+        font-size: 8px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .check{
+        margin-top: 5px;
+        margin-right: 15px;
+    }
+    .toDoList-container{
+        height: 100px;
+        overflow: auto;
+    }
+}

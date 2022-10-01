@@ -1,0 +1,368 @@
+/* setting the theme for the page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
+
+:root{
+  --pcolor:#FFFBE0;
+  --bcolor:#FCDA05;
+  --mcolor:#393E46
+}
+.dark{
+  --mcolor:#292B43;
+  --bcolor:#FFFFFF;
+  --pcolor:#DDE1EE
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: var(--pcolor);
+    color: var(--mcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.btn{
+    cursor: pointer;
+    background: var(--mcolor);
+    color: var(--pcolor);
+    padding: .25rem 1.25rem;
+    border-radius: 1.25rem;
+    font-weight: 600;
+}
+.container{
+    background: var(--bcolor);
+    border-radius: 0.5rem;
+    box-shadow: 0 .25rem .5rem rgba(0,0,0,0.2);
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 1.25rem;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    margin-bottom: 5%;
+}
+li{
+	background: white;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	color: #666;
+	cursor: pointer;
+    margin: 0 5%;
+}
+li:nth-child(2n) {
+	background: #f7f7f7;
+}
+li:hover span{
+	width: 2.5rem;
+	opacity: 1.0;
+}
+span{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--bcolor);
+	background: var(--pcolor);
+	height: 2.5rem;
+	margin-right: 1.25rem;
+	text-align: center;
+	width: 0px;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+	cursor: pointer;
+}
+input{
+	background-color: var(--pcolor);
+	width: 100%;
+	padding: .5rem .5rem .5rem 1rem;
+	box-sizing: border-box;
+	border: .25rem solid rgba(0,0,0,0);
+    font-size: 1rem;
+}
+input:focus {
+	background: #fff;
+	border: 0.25rem solid #2980b9;
+	outline: none;
+}
+
+section{
+    height: 90vh;
+    width: 100%;
+}
+
+#logOutButton{
+    width: 10%;
+    font-size: .8rem;
+}
+
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(./wave.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.login-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    width: 25rem;
+}
+.loginCredentials{
+    display: flex;
+    flex-wrap: wrap;
+    height: 20rem;
+    width: 20rem;
+}
+.email-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.password-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.btn-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.loginButton{
+    cursor: pointer;
+    background: var(--pcolor);
+    color: var(--mcolor);
+    padding: .25rem 1.25rem;
+    border-radius: 1.25rem;
+    font-weight: 600;
+    width: 90%;
+}
+.anchorTag{
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: underline;
+    color: blue;
+}
+.anchorTag:hover{
+    cursor: pointer;
+}
+.modalForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.createAccountFormTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.submitButton{
+    cursor: pointer;
+    background: var(--pcolor);
+    color: var(--mcolor);
+    padding: .25rem 1.25rem;
+    border-radius: 1.25rem;
+    font-weight: 600;
+    width: 100%;
+}
+.homePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userList-container{
+    height: 75%;
+    width: 40%;
+    overflow: auto;
+}
+.addNewAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 5% 0;
+}
+.manageAccount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.accountUser-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+}
+.accountUserInformation{
+    height: 45%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.accountUserDashboard{
+    height: 45%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.welcomeUserName-container{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.transactionHistoryHeader-container{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.balanceUser-container{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.accountDashboard-container{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.transactionHistory{
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+.expenseHistory{
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.transactionButtons-container{
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.expenseButton-container{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.transactionBTN{
+    height: 40%;
+    width: 25%;
+    font-size: 0.75rem;
+}
+.expenseItemLi{
+    width: 100%;
+    height: 25%;
+    background: none;
+	line-height: 0;
+	color: #666;
+	cursor: pointer;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+}
+.expenseItemLi:nth-child(2n) {
+	background: none;
+}
+.expenseItemTrash{
+    background: none;
+    color: red;
+    margin-right: 0;
+}
+
+/* The Modal (background) */
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 25vh; /* Location of the box */
+    padding-left: 40vw;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content{
+    position: relative;
+    background: var(--bcolor);
+    border-radius: 0.5rem;
+    box-shadow: 0 .25rem .5rem rgba(0,0,0,0.2);
+    height: 25rem;
+    width: 20rem;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-20rem; opacity:0} 
+    to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+    from {top:-20rem; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close{
+    color: white;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+.close:hover, .close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.createAccountHeader{
+    padding-left: 5rem;
+}
+.remove{
+    display: none;
+}

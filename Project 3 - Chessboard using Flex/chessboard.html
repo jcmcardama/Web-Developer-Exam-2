@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main id="main">
+        <section id="menu">
+            <div id="btn1" onclick="myfun()">Set-Up</div>
+            <div id="btn2" onclick="myfun2()">Clear</div>
+        </section>
+        <section id="chessboard"></section>
+    </main>
+
+    <script>
+
+        let text = "";
+        var checker = 0;
+        var clrchkr = 1;
+        var sqnumber = 0;
+        const grid = [];
+
+        for(k = 0; k < 64; k++){
+            grid.push("");
+        }
+
+        for(var ctr = 0; ctr < 8; ctr++){
+            checker = ctr%2;
+            for(var ctr2 = 0; ctr2 < 8; ctr2++){
+                if(checker == 0){
+                    if(clrchkr == 0){
+                        text += '<div class="box black-box">'+ grid[sqnumber] +'</div>';
+                        sqnumber += 1;
+                        clrchkr = 1;
+                    }
+                    else{
+                        text += '<div class="box">'+ grid[sqnumber] +'</div>';
+                        sqnumber += 1;
+                        clrchkr = 0;
+                    }
+                }
+                else{
+                    if(clrchkr == 0){
+                        text += '<div class="box">'+ grid[sqnumber] +'</div>';
+                        sqnumber += 1;
+                        clrchkr = 1;
+                    }
+                    else{
+                        text += '<div class="box black-box">'+ grid[sqnumber] +'</div>';
+                        sqnumber += 1;
+                        clrchkr = 0;
+                    }
+                }
+            }
+        }
+
+        document.getElementById("chessboard").innerHTML = text;
+
+        function myfun(){
+            let text = "";
+            var checker = 0;
+            var sqnumber = 0;
+            var whitepcs = [['&#9817', 48, 49, 50, 51, 52, 53, 54, 55], ['&#9814', 56, 63], ['&#9816', 57, 62], ['&#9815',58, 61], ['&#9813', 59], ['&#9812', 60]];
+            var blackpcs = [['&#9823', 8, 9, 10, 11, 12, 13, 14, 15], ['&#9820', 0, 7], ['&#9822', 1, 6], ['&#9821', 2, 5], ['&#9819', 3], ['&#9818', 4]];
+            var chesspcs = whitepcs.concat(blackpcs);
+            const grid = [];
+
+            for(k = 0; k < 64; k++){
+                grid.push("");
+            }
+
+            for(i = 0; i < chesspcs.length; i++){
+                for(j = 1; j < chesspcs[i].length; j++){
+                    grid[chesspcs[i][j]] = chesspcs[i][0];
+                }
+            }
+
+            for(var ctr = 0; ctr < 8; ctr++){
+                checker = ctr%2;
+                for(var ctr2 = 0; ctr2 < 8; ctr2++){
+                    if(checker == 0){
+                        if(clrchkr == 0){
+                            text += '<div class="box black-box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 1;
+                        }
+                        else{
+                            text += '<div class="box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 0;
+                        }
+                    }
+                    else{
+                        if(clrchkr == 0){
+                            text += '<div class="box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 1;
+                        }
+                        else{
+                            text += '<div class="box black-box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 0;
+                        }
+                    }
+                }
+            }
+            document.getElementById("chessboard").innerHTML = text;
+        }
+
+        function myfun2(){
+            let text = "";
+            var checker = 0;
+            var clrchkr = 1;
+            var sqnumber = 0;
+            const grid = [];
+
+            for(k = 0; k < 64; k++){
+                grid.push("");
+            }
+
+            for(var ctr = 0; ctr < 8; ctr++){
+                checker = ctr%2;
+                for(var ctr2 = 0; ctr2 < 8; ctr2++){
+                    if(checker == 0){
+                        if(clrchkr == 0){
+                            text += '<div class="box black-box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 1;
+                        }
+                        else{
+                            text += '<div class="box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 0;
+                        }
+                    }
+                    else{
+                        if(clrchkr == 0){
+                            text += '<div class="box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 1;
+                        }
+                        else{
+                            text += '<div class="box black-box">'+ grid[sqnumber] +'</div>';
+                            sqnumber += 1;
+                            clrchkr = 0;
+                        }
+                    }
+                }
+            }
+
+            document.getElementById("chessboard").innerHTML = text;
+        }
+
+        // function myfun3(){
+        //     var move1 = document.getElementsByClassName("box");
+        //     var content = "";
+
+        //     move1.onclick = function(){
+        //         move1.innerHTML = "";
+        //     }
+        // }
+
+    </script>
+</body>
+</html>

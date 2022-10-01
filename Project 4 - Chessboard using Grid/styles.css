@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 3vmin;
+}
+
+#main{
+    display: grid;
+    height: 100vmin;
+    width: 100vmin;
+    grid-template-columns: 20vmin 80vmin;
+    justify-items: center;
+    align-items: center;
+}
+
+#menu{
+    display: grid;
+}
+
+#btn1{
+    cursor: pointer;
+    margin: 2.5vmin;
+}
+
+#btn2{
+    cursor: pointer;
+    margin: 2.5vmin;
+}
+
+#chessboard{
+    display: grid;
+    height: 80vmin;
+    width: 80vmin;
+    padding: 5vmin;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(8, 12.5%);
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+    justify-items: center;
+    align-items: center;
+    font-size: 8vmin;
+    cursor: pointer;
+    background-color: #eeeed2;
+}
+
+.box:nth-child(16n+2), .box:nth-child(16n+4), .box:nth-child(16n+6), .box:nth-child(16n+8),.box:nth-child(16n+9), .box:nth-child(16n+11), .box:nth-child(16n+13), .box:nth-child(16n+15){
+    background-color: #769656;
+}
+
+.box:hover{
+    background-color: orange;
+}
+
+.selected{
+    color: blue;
+}

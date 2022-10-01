@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Revalia' rel='stylesheet'>
+</head>
+<body>
+    <main class="main">
+        <section id="tribute-section">
+            <!-- This is for the Tribute Page -->
+            <iframe src="https://jcmcardama.github.io/batch18-fe-activities/Project%201%20-%20Tribute%20Page/Tribute_Page_Cardama.html" style="border:none; height:70%; width:100%" title="Tribute Page"></iframe>
+        </section>
+
+        <section id="survey-section">
+            <!-- This is for the Feedback Form -->
+
+            <div class="title-container">
+                <h1 class="title">Rate my page!</h1>
+                <p class="description">
+                    Kindly help me how I can improve my Tribute Page.
+                </p>
+            </div>
+
+            <form class="survey-form">
+
+                <div class="name-container">
+                    <label for="name" id="name">Full Name</label>
+                    <input type="text" id="name-label" placeholder="Juan Dela Cruz" name="name">
+                </div>
+
+                <div class="email-container">
+                    <label for="email" id="email">Email</label>
+                    <input type="email" id="email-label" placeholder="juandelacruz@gmail.com" name="email">
+                </div>
+
+                <div class="age-container">
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" id="number" min="1" max="100" placeholder="1-100 y.o." name="age">
+                </div>
+
+                <div class="gender-container">
+                    <label for="gender" id="gender-label">Gender</label>
+                    <select name="gender" id="dropdown">
+                        <option disabled="" selected="" value="">--Select Gender--</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="nonbinary">Non-binary</option>
+                        <option value="na">I prefer not to say</option>
+                    </select>
+                </div>
+
+                <div class="improve-container">
+                    <label for="improve" id="improve-label">What needs to improve?<br>(Check all that apply.)</label>
+                    <div class="option1-container">
+                        <input type="checkbox" id="option1" name="option1" value="fonts">
+                        <label for="option1">Fonts</label>
+                    </div>
+                    <div class="option2-container">
+                        <input type="checkbox" id="option2" name="option2" value="color">
+                        <label for="option2">Color</label>
+                    </div>
+                    <div class="option3-container">
+                        <input type="checkbox" id="option3" name="option3" value="spacing">
+                        <label for="option3">Spacing</label>
+                    </div>
+                    <div class="option4-container">
+                        <input type="checkbox" id="option4" name="option4" value="placement">
+                        <label for="option4">Placement</label>
+                    </div>
+                    <div class="option5-container">
+                        <input type="checkbox" id="option5" name="option5" value="size">
+                        <label for="option5">Size</label>
+                    </div>
+                </div>
+
+                <div class="overall-container">
+                    <label for="overall" id="overall-label">How would you rate the page overall?</label>
+                    <div class="overall-container-answer">
+                        <div class="satisfied-container">
+                            <input type="radio" name="overall" id="satisfied" value="satisfied" checked>
+                            <label for="satisfied">😎</label>
+                            <div>Great!</div>
+                        </div>
+                        <div class="neutral-container">
+                            <input type="radio" name="overall" id="neutral" value="neutral">
+                            <label for="neutral">😶</label>
+                            <div>Meh.</div>
+                        </div>
+                        <div class="dissatisfied-container">
+                            <input type="radio" name="overall" id="dissatisfied" value="dissatisfied">
+                            <label for="dissatisfied">😣</label>
+                            <div>Yuck!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-container">
+                    <label for="textarea">Additional Feedback</label>
+                    <textarea neme="textarea" id="textarea" name="feedback"></textarea>
+                </div>
+
+                <div class="submit-container">
+                    <input type="submit" value="Submit" class="btn" onclick="alert('Thank you for your feedback')">
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>

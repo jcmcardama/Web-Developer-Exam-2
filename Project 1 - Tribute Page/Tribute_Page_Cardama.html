@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeBron James</title>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: black;
+        }
+        #main {
+            display: flex;
+            flex-direction: column;
+        }
+        section {
+            height: 100vh;
+            width: 100%;
+        }
+        #title {
+            background-image: url('https://images3.alphacoders.com/914/thumb-1920-914671.png');
+            color: #FDBB30;
+            background-attachment: fixed;
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        #title h1{
+            margin-left: 6vw;
+            font-size: 3.5vw;
+            margin-bottom: 0vw;
+            font-family: Georgia, serif;
+        }
+        #title h6{
+            margin-left: 25vw;
+            margin-top: 0vw;
+            margin-bottom: 2vw;
+            font-size: 2vw;
+            font-style: italic;
+        }
+        .scroll-down {
+            height: 5vw;
+            width: 5vw;
+            border: .2vw solid white;
+            cursor: pointer;
+            position: absolute;
+            border-radius: 1vw;
+            margin-left: 50vw;
+            margin-top: 7vw;
+            margin-bottom: 2vw;
+        }
+        .scroll-down::before,
+        .scroll-down::after{
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            border: .5vw solid white;
+            height: 2vw;
+            width: 2vw;
+            transform: translate(-50%, 20%) rotate(-45deg);
+            border-top: transparent;
+            border-right: transparent;
+        }
+        .about-div {
+            position: relative;
+            max-width: 50%;
+            max-height: 100%;
+        }
+        .img-div {
+            position: relative;
+            max-width: 50%;
+            max-height: 100%;
+            display: flex;
+        }
+        .image {
+            height: auto;
+            width: 100%;
+            align-items: center;
+            align-content: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: auto;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #860038;
+        }
+        .img-div:hover .overlay {
+            opacity: 1;
+        }
+        .img-caption {
+            color: #FDBB30;
+            font-size: 1.1vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+        #tribute-info {
+            color: white;
+            font-size: 1.4vw;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-evenly;
+        }
+        a.tribute-link:visited {
+            color: green;
+        }
+        a.tribute-link:hover {
+            color: blue;
+        }
+    </style>
+
+  </head>
+
+  <body>
+      <main id="main">
+
+        <section id="title">
+            <h1>LeBron Raymone James Sr.</h1>
+            <h6>Greatest of all time.</h5>
+            <a href="#tribute-info">
+                <div class="scroll-down"></div>
+            </a>
+        </section>
+
+        <section id="tribute-info">
+            <div class="about-div">
+                <h1><u>About</u></h1>
+                <h3> Introduction</h3>
+                <p>
+                    LeBron Raymone James Sr. (born December 30, 1984) is an American professional basketball player for the Los Angeles Lakers of the National Basketball Association (NBA). Nicknamed "King James", he is widely considered one of the greatest players in NBA history and is frequently compared to Michael Jordan in debates over the greatest basketball player ever.
+                </p>
+                <h3>Accolades</h3>
+                <p>
+                    James is the only player to have won the NBA Finals MVP with three different franchises. James has competed in ten NBA Finals, eight of them consecutively with the Heat and the Cavaliers from 2011 to 2018. His accomplishments include four NBA championships, four NBA MVP awards, four NBA Finals MVP awards, and two Olympic gold medals. During his 18-year career, James holds the record for all-time playoffs points, as well as most combined regular season and playoff points, is third in all-time points, and seventh in career assists. James has been selected to the All-NBA Team a record 17 times (with a record of 13 First Team selections and 11 consecutive First Team selections, the latter of which is shared with Karl Malone), made the NBA All-Defensive First Team five times, and has been named an All-Star 18 times, including three All-Star MVP selections. In 2021, he was selected to the NBA 75th Anniversary Team.
+                </p>
+                <p>
+                    To know more about Lebron James, see his page at <a class="tribute-link" href="https://en.wikipedia.org/wiki/LeBron_James" target="_blank">Wikipedia</a>
+                </p>
+            </div>
+
+            <div class="img-div">
+                <img src="https://sportshub.cbsistatic.com/i/r/2016/06/20/b902bfbd-2bfe-4e5b-b1ab-d0d1f09c1511/thumbnail/1200x675/43dff935375f4a3df6196590e4c25578/lebroncavstitle.jpg" class="image">
+                <div class="overlay">
+                    <div class="img-caption">Lebron's 3rd NBA Championship and Final's MVP</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+  </body>
+
+</html>

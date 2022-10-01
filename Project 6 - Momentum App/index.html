@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="btn">Dark</div>
+    <section id="homepage">
+        <div class="container name-container">
+            <h1 id="welcome-name"></h1><h1 contenteditable="true">(Name)</h1>
+        </div>
+        <div class="container focus-container">
+            <h1 id="welcome-focus">Your main focus for today is&nbsp;</h1><h1 contenteditable="true">(Focus)</h1>
+        </div>
+        <div class="container clock-container">
+            <h1 id="clockToday"></h1>
+        </div>
+        <div class="container quote-container">
+            <p id="quoteToday"></p>
+            <div id="addQuote-container">
+                <input type="text" id="quoteListInput" placeholder="Add Quote">
+                <button id="addQuoteList">ADD</button>
+            </div>
+        </div>
+        <div class="container toDoList-container">
+            <h1>To Do List<i class='fa fa-plus'></i></h1>
+            <input type="text" class="inputToDolist" placeholder="Add New To-Do">
+            <ul></ul>
+        </div>
+    </section>
+</body>
+<script src="app.js"></script>
+</html>

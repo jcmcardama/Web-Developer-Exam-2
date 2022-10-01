@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    height: 5vmin;
+    width: 5vmin;
+    font-size: 3vmin;
+}
+
+#btn1{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#btn2{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#chessboard{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 80vmin;
+    height: 80vmin;
+    padding: 5vmin;
+    font-size: 10vmin;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25%;
+    height: 12.5%;
+    width: 12.5%;
+    cursor: pointer;
+    background-color: #eeeed2;
+}
+
+.box:hover{
+    background-color: orange;
+}
+
+.black-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #769656;
+    padding: 1.25%;
+    width: 12.5%;
+    height: 12.5%;
+}
